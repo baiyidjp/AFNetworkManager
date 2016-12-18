@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "NetworkManager.h"
+#import "NetworkManager+Extension.h"
 
 @interface ViewController ()
 
@@ -17,6 +19,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    //http://qt.qq.com/static/pages/news/phone/c13_list_1.shtml
+    [[NetworkManager shared] LiveRequestWithMethod:HttpMethod_GET Url:@"static/pages/news/phone/c13_list_1.shtml" params:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"%@", responseObject);
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        NSLog(@"%@",error);
+    }];
+    
+    [[NetworkManager shared] LoginRequestWithMethod:HttpMethod_GET Url:@"static/pages/news/phone/c13_list_1.shtml" params:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        
+    }];
+    
 }
 
 
