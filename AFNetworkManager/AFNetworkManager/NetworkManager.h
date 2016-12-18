@@ -25,6 +25,9 @@ typedef void(^failureBlock)(NSURLSessionDataTask *task, NSError *error);
 /** 网络管理单例 */
 + (NetworkManager *)shared;
 
+/** 取消全部网络请求 */
+- (void)cancelAllRequest;
+
 /**
  封装AFN请求
  

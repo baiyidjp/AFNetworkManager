@@ -47,6 +47,11 @@
     return _sessionManager;
 }
 
+- (void)cancelAllRequest {
+    
+    [self.sessionManager.operationQueue cancelAllOperations];
+}
+
 /**
  封装AFN请求
  
