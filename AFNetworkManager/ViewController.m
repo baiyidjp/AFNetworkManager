@@ -32,6 +32,11 @@
         
     }];
     
+    [[NetworkManager shared] UploadRequestWithUrl:@"baidu.com" params:nil datas:@[@{@"name":@"12",@"data":@"13"},@{@"name":@"22",@"fileUrl":@"23"}] success:^(NSURLSessionDataTask *task, id responseObject) {
+        
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        
+    }];
 }
 
 

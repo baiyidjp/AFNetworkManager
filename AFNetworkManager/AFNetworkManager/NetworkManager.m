@@ -146,9 +146,11 @@
              3.fileName : 保存在服务器的文件名
              4.mimeType : 类型 不想告诉可以直接写 application/octet-stream
              */
-            NSString *name = [dict objectForKey:@"name"];
-            NSData *data = [dict objectForKey:@"data"];
-            NSString *fileUrl = [dict objectForKey:@"fileUrl"];
+            //字典的keys
+            NSArray *keys = dict.allKeys;
+            NSString *name = [keys containsObject:@"name"] ? [dict objectForKey:@"name"] : nil;
+            NSData *data = [keys containsObject:@"data"] ? [dict objectForKey:@"data"] : nil;
+            NSString *fileUrl = [keys containsObject:@"fileUrl"] ? [dict objectForKey:@"fileUrl"] : nil;
             if (data != nil) {
                 [formData appendPartWithFileData:[dict objectForKey:@"data"] name:[dict objectForKey:@"name"] fileName:[NSString stringWithFormat:@"二进制文件%zd",idx] mimeType:@"application/octet-stream"];
             }
