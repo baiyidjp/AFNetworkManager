@@ -68,7 +68,7 @@
                   failure:(failureBlock)failure
 {
     //拼接请求地址
-    NSString *hostName = [NSString stringWithFormat:@"%@://%@/",@"http",@"qt.qq.com"];
+    NSString *hostName = [NSString stringWithFormat:@"%@://%@",@"http",@"公司域名"];
     NSString *realUrl = [NSString stringWithFormat:@"%@/%@",hostName,urlStr];
     
     //自定义block回调 成功
@@ -110,8 +110,11 @@
     }else {
         paramsM = [NSMutableDictionary dictionaryWithDictionary:params];
     }
-    //设置登陆标识
-    [paramsM setObject:@"userid" forKey:@"userid"];
+    //若已经登录 设置登陆标识  若未登录则还是按照原先的参数传递
+#warning 判断是否登录
+    if (@"已登录") {
+        [paramsM setObject:[NSNumber numberWithInteger:001] forKey:@"userid"];
+    }
     
     [self LoginUploadRequestWithMethod:httpMethod Url:urlStr params:[paramsM copy] datas:nil success:success failure:failure];
 }

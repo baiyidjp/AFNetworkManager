@@ -80,7 +80,7 @@ typedef void(^failureBlock)(NSURLSessionDataTask *task, NSError *error);
 
  @param urlStr 请求地址
  @param params 请求参数
- @param datas  二进制数据集合 [字典数据]->[name:@"xxx",data:xxx]
+ @param datas  二进制数据集合 [字典数组]->[name:@"xxx",data:xxx] / [name:@"xxx",fileName:@"xxx"]
  @param success 成功回调
  @param failure 失败回调
  */

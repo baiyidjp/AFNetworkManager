@@ -17,7 +17,6 @@
 		F512A9031E063A3900E36105 /* AFNetworkManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F512A9021E063A3900E36105 /* AFNetworkManagerTests.m */; };
 		F512A90E1E063A3900E36105 /* AFNetworkManagerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F512A90D1E063A3900E36105 /* AFNetworkManagerUITests.m */; };
 		F592174F1E064BF2005A0DA0 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F592174E1E064BF2005A0DA0 /* NetworkManager.m */; };
-		F59217521E065E14005A0DA0 /* NetworkManager+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = F59217511E065E14005A0DA0 /* NetworkManager+Extension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,8 +60,6 @@
 		F512A90F1E063A3900E36105 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F592174D1E064BF2005A0DA0 /* NetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
 		F592174E1E064BF2005A0DA0 /* NetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
-		F59217501E065E14005A0DA0 /* NetworkManager+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NetworkManager+Extension.h"; sourceTree = "<group>"; };
-		F59217511E065E14005A0DA0 /* NetworkManager+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NetworkManager+Extension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,8 +177,6 @@
 			children = (
 				F592174D1E064BF2005A0DA0 /* NetworkManager.h */,
 				F592174E1E064BF2005A0DA0 /* NetworkManager.m */,
-				F59217501E065E14005A0DA0 /* NetworkManager+Extension.h */,
-				F59217511E065E14005A0DA0 /* NetworkManager+Extension.m */,
 			);
 			path = AFNetworkManager;
 			sourceTree = "<group>";
@@ -370,7 +365,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F59217521E065E14005A0DA0 /* NetworkManager+Extension.m in Sources */,
 				F512A8F01E063A3900E36105 /* ViewController.m in Sources */,
 				F512A8ED1E063A3900E36105 /* AppDelegate.m in Sources */,
 				F592174F1E064BF2005A0DA0 /* NetworkManager.m in Sources */,
